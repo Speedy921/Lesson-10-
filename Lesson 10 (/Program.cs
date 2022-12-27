@@ -44,3 +44,12 @@ Console.WriteLine("****8Fun with Class types*****");
 MotorCycle mc = new MotorCycle();
 mc.PopAWheely();
 
+Console.ReadLine();
+
+//создаем обьект MotorCycle с мотоциклистом по имени Tiny
+MotorCycle c = new MotorCycle(5);
+c.SetDriverName("Tiny");
+c.PopAWheely();
+Console.WriteLine("Rider name is {0}", c.driverName);
+
+Console.ReadLine();

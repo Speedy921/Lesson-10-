@@ -10,20 +10,45 @@ namespace Lesson_10__
     class MotorCycle
     {
         public int driverIntensity;
+
+        // предоставление имени водителя
+        public string driverName;
+        //связывание конструкторов в цепочку
+
+        //стандартный конструктор
+        public MotorCycle() { }
+
+        //специальный конструктор 
+        public MotorCycle(int intensity)
+            : this(intensity, " ") { }
+        public MotorCycle(string name)
+            : this(0, name) { }
+        //главный конструктор выполняющий работу 
+        public MotorCycle(int intensity, string name)
+        {
+            if (intensity > 10)
+            {
+                intensity = 10;
+            }
+            driverIntensity = intensity;
+            driverName = name;
+        }
+
         public void PopAWheely()
         {
-            for (int i = 0; i < driverIntensity; i++) 
+            for (int i= 0; i < driverIntensity; i++)
             {
-                Console.WriteLine("Yeeeeee Haaaaww!"); 
-            }           
+                Console.WriteLine("Yeeeeee Haaaaaaw!");
+            }
         }
-        //возвращаем стандартный конструктор, котрый будет ставить стандартные значения 
-        public MotorCycle() { }
-    
-        //специальный конструктор
-        public MotorCycle(int intensity)
+
+        public void SetDriverName(string name)
         {
-            driverIntensity = intensity;
-        } 
+            driverName = name;
+            this.driverName = name;
+        }
+
+
+        
     }    
 }
