@@ -16,16 +16,26 @@ namespace Lesson_10__
         //связывание конструкторов в цепочку
 
         //стандартный конструктор
-        public MotorCycle() { }
+        public MotorCycle()
+        {
+            Console.WriteLine("In defaut ctor"); //внутри стандартного конструктора
+        }
 
         //специальный конструктор 
         public MotorCycle(int intensity)
-            : this(intensity, " ") { }
+            : this(intensity, " ") 
+        {
+            Console.WriteLine("In ctor taking an int"); //внутри конструктора принимающего int
+        }
         public MotorCycle(string name)
-            : this(0, name) { }
+            : this(0, name)
+        {
+            Console.WriteLine("In ctor taking a string"); //внутри конструктора принимающего string
+        }
         //главный конструктор выполняющий работу 
         public MotorCycle(int intensity, string name)
         {
+            Console.WriteLine("In master ctor"); //внутри главного конструктора 
             if (intensity > 10)
             {
                 intensity = 10;

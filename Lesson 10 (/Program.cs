@@ -50,6 +50,6 @@ Console.ReadLine();
 MotorCycle c = new MotorCycle(5);
 c.SetDriverName("Tiny");
 c.PopAWheely();
-Console.WriteLine("Rider name is {0}", c.driverName);
+Console.WriteLine("Rider name is {0}", c.driverName); //вывод имени гонщика 
 
 Console.ReadLine();
